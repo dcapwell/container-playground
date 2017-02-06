@@ -18,7 +18,10 @@ cd centos-bundle/
   rm -f config.json 
   runc spec
 cd -
-oci-runtime-tool generate --tty --bind /etc/resolv.conf:/etc/resolv.conf --template centos-bundle/config.json > centos-bundle/config.json.tmp
+oci-runtime-tool generate \
+  --tty \
+  --bind /etc/resolv.conf:/etc/resolv.conf \
+  --template centos-bundle/config.json > centos-bundle/config.json.tmp
 mv -f centos-bundle/config.json{.tmp,}
 runc run -b centos-bundle/ ctr
 ```
