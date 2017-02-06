@@ -29,7 +29,9 @@ If `runc` fails with `container_linux.go:247: starting container process caused 
 
 # Running without root
 
-As of Ubunt 14.04, this doesn't work; testing on RHEL 7 is needed to see if it works there.
+As of Ubunt 14.04, this doesn't work. Tested on CentOS 7.3 and it mostly works; unselect gets a
+permission issue, but running runc with sudo allows the container to run (which is running as
+root in the container and the normal user outside the container).
 
 ## Prerequisites
 
