@@ -5,7 +5,7 @@ docker build -t oci/playground .
 docker run -ti --privileged --security-opt seccomp=unconfined oci/playground bash
 ```
 
-# Running (root)
+# Running
 
 ```
 mkdir -p /tmp/playground
