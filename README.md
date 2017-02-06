@@ -8,7 +8,6 @@ docker run -ti --privileged --security-opt seccomp=unconfined oci/playground bas
 # Running (root)
 
 ```
-export PATH=$PATH:/root/bin
 mkdir -p /tmp/playground
 cd /tmp/playground/
 skopeo copy docker://centos oci:centos
